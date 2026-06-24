@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class Trigonometric {
+    static double[] calculate(double angle) {
+        double rad = Math.toRadians(angle);
+
+        double sin = Math.sin(rad);
+        double cos = Math.cos(rad);
+        double tan = Math.tan(rad);
+
+        return new double[]{sin, cos, tan};
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        double angle = sc.nextDouble();
+
+        double result[] = calculate(angle);
+
+        System.out.println("Sin = " + result[0]);
+        System.out.println("Cos = " + result[1]);
+        System.out.println("Tan = " + result[2]);
+    }
+}
